@@ -1,0 +1,4 @@
+# 테스트 전용 설정. 접속 정보는 커밋하지 않고 로컬 .env(gitignore 대상)에서 읽는다.
+spring:
+  config:
+    import: optional:file:.env[.properties]
