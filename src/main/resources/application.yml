@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: financial_consultation
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none # 스키마는 수동 SQL로 관리
+    open-in-view: false
+
+embedding-server:
+  base-url: ${EMBEDDING_SERVER_BASE_URL:http://localhost:8000}
