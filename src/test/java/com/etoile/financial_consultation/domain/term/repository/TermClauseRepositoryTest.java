@@ -10,9 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase;
+import org.springframework.test.context.ActiveProfiles;
 
 /** 로컬 Docker PostgreSQL(pgvector)에 연결해 매핑을 검증한다. 각 테스트는 롤백된다. */
 @DataJpaTest
+@ActiveProfiles("test")
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class TermClauseRepositoryTest {
 
